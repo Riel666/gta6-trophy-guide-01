@@ -1,0 +1,104 @@
+/* Platinum Path — an original look: a warm Vice City sunset gradient, no Rockstar art. */
+:root {
+  --ink: #241a2e;
+  --muted: #5d5266;
+  --paper: #fff8f1;
+  --card: #ffffff;
+  --line: #e8d9cf;
+  --plum: #4b2358;
+  --pink: #e2478c;
+  --orange: #ff8a3d;
+  --teal: #0e7d7b;
+  --red: #b3261e;
+  --gold: #8a6d00;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  margin: 0; color: var(--ink); background: var(--paper);
+  font-size: 15px; line-height: 1.5;
+}
+.masthead {
+  background: linear-gradient(115deg, #2c1540 0%, #6d1f5c 45%, #c94f6d 75%, #ff8a3d 100%);
+  color: #fff; padding: 28px 24px 22px;
+  display: flex; gap: 32px; flex-wrap: wrap; justify-content: space-between;
+}
+.masthead > div:first-child { max-width: 640px; }
+.kicker { margin: 0 0 6px; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; opacity: .9; }
+h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.05; letter-spacing: -.01em; }
+.subtitle { margin: 0; font-size: 16px; opacity: .96; max-width: 60ch; }
+.progress-box { background: rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 14px 16px; min-width: 300px; max-width: 360px; }
+.progress-line { margin: 0 0 8px; font-size: 17px; display: flex; justify-content: space-between; }
+.progress-bar { height: 12px; background: rgba(255,255,255,.25); border-radius: 6px; overflow: hidden; }
+.progress-bar > div { height: 100%; width: 0%; background: linear-gradient(90deg, #ffd166, #ff8a3d); transition: width .3s; }
+.progress-grades, .progress-stages { margin: 8px 0 0; font-size: 13px; opacity: .95; }
+.warnings {
+  margin: 0; padding: 12px 24px; background: #fff1d6; border-bottom: 2px solid #f2c14e;
+  display: flex; gap: 28px; flex-wrap: wrap;
+}
+.warnings p { margin: 0; font-size: 14px; max-width: 52ch; }
+.roadmap { padding: 20px 24px 8px; max-width: 1120px; margin: 0 auto; }
+.roadmap h2, footer h2 { margin: 0 0 6px; font-size: 22px; color: var(--plum); }
+.roadmap-note { margin: 0 0 14px; color: var(--muted); max-width: 90ch; }
+.stages { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.stages li { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--pink); border-radius: 10px; padding: 14px 16px; }
+.stages li:nth-child(2) { border-left-color: var(--orange); }
+.stages li:nth-child(3) { border-left-color: var(--teal); }
+.stages h3 { margin: 0 0 4px; font-size: 17px; }
+.stages h3 span { color: var(--muted); font-weight: 600; font-size: 13px; }
+.stages p { margin: 0 0 6px; font-size: 14px; }
+.stages .stage-count { font-weight: 700; color: var(--plum); }
+.stages .stage-source { font-size: 12px; color: var(--muted); }
+.controls { padding: 14px 24px; max-width: 1120px; margin: 0 auto; position: sticky; top: 0; background: var(--paper); z-index: 5; border-bottom: 1px solid var(--line); }
+.control-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 6px 0; }
+.search input { width: 300px; max-width: 70vw; }
+input[type="search"], select { font: inherit; padding: 7px 10px; border: 1px solid #cbb8a8; border-radius: 8px; background: #fff; color: var(--ink); }
+button { font: inherit; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--plum); background: var(--plum); color: #fff; cursor: pointer; }
+button:hover { background: #5d2c6e; }
+button.ghost { background: #fff; color: var(--plum); }
+.toggle { font-size: 14px; display: inline-flex; gap: 6px; align-items: center; }
+.kinds { display: flex; gap: 6px; flex-wrap: wrap; }
+.kinds button { background: #fff; color: var(--ink); border-color: #cbb8a8; padding: 5px 11px; font-size: 13px; }
+.kinds button[aria-pressed="true"] { background: var(--plum); color: #fff; border-color: var(--plum); }
+.import { font-size: 14px; }
+.import input { font-size: 12px; max-width: 220px; }
+.showing { margin-left: auto; color: var(--muted); font-size: 13px; }
+main { max-width: 1120px; margin: 0 auto; padding: 8px 24px 24px; }
+.list { display: grid; gap: 12px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px 14px 12px; display: grid; grid-template-columns: 34px 1fr; gap: 12px;
+}
+.card.earned { border-color: #9ecf9e; background: #f4fbf2; }
+.card input[type="checkbox"] { width: 24px; height: 24px; margin: 4px 0 0 4px; accent-color: var(--teal); cursor: pointer; }
+.card h3 { margin: 0 0 2px; font-size: 18px; }
+.card h3 .num { color: var(--muted); font-size: 13px; font-weight: 600; margin-right: 6px; }
+.official { margin: 0 0 8px; font-style: italic; color: #4a3a55; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
+.badge {
+  display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+  border: 1px solid #cbb8a8; background: #f6ece2; color: #5d3a28; white-space: nowrap;
+}
+.badge.platinum { background: #e8f4ff; border-color: #7fb6e8; color: #144a75; }
+.badge.gold { background: #fff3bf; border-color: #d4a017; color: var(--gold); }
+.badge.silver { background: #eef0f2; border-color: #9aa3ab; color: #3d454c; }
+.badge.bronze { background: #fbe9d9; border-color: #c98a4b; color: #6e3f12; }
+.badge.missable { background: #fde8e6; border-color: #d93025; color: var(--red); }
+.badge.hidden { background: #ece6f5; border-color: #8a6dbb; color: #4b2358; }
+.guide { margin: 0 0 8px; font-size: 14.5px; max-width: 95ch; }
+.guide strong { color: var(--plum); }
+.steps { margin: 0 0 8px 20px; padding: 0; font-size: 14px; }
+.steps li { margin: 2px 0; }
+.sources { margin: 0; font-size: 12.5px; color: var(--muted); }
+.sources a { color: var(--teal); }
+.spoiler-hidden { color: var(--muted); font-style: italic; }
+.empty { background: var(--card); border: 1px dashed #cbb8a8; border-radius: 12px; padding: 22px; font-size: 15px; }
+footer { max-width: 1120px; margin: 0 auto; padding: 8px 24px 32px; color: var(--muted); font-size: 14px; }
+footer ul { margin: 6px 0 12px 20px; padding: 0; }
+footer a { color: var(--teal); }
+.disclaimer { font-size: 13px; }
+@media (max-width: 760px) {
+  .stages { grid-template-columns: 1fr; }
+  h1 { font-size: 32px; }
+  .card { grid-template-columns: 30px 1fr; }
+}

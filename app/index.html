@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Path — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Unofficial fan guide</p>
+    <h1>Platinum Path</h1>
+    <p class="subtitle">An offline guide and tracker for all 55 GTA VI trophies — every official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and the one trophy you can miss.</p>
+  </div>
+  <div class="progress-box" aria-label="Progress">
+    <p class="progress-line"><strong id="progressText">0 of 55 earned</strong> <span id="progressPct">0%</span></p>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-grades" id="progressGrades"></p>
+    <p class="progress-stages" id="progressStages"></p>
+  </div>
+</header>
+
+<section class="warnings" aria-label="Before you start">
+  <p><strong>Cheats disable trophies and saving</strong> — keep them off for a trophy run. (PowerPyx; GameSpot / PC Gamer)</p>
+  <p><strong>1 possibly missable trophy:</strong> Positive Mental Attitude — meditate with Lucia on Jason's balcony in Chapter 1, before the chapter ends. (PowerPyx, GTABase)</p>
+  <p><strong>No online trophies.</strong> All 55 are offline, single-player; one playthrough is enough. (PowerPyx)</p>
+</section>
+
+<section class="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-note" id="platinumNote"></p>
+  <ol class="stages" id="roadmapStages"></ol>
+</section>
+
+<section class="controls" aria-label="Tracker controls">
+  <div class="control-row">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+    <label class="grade">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="toggle"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+    <label class="toggle"><input id="hideEarned" type="checkbox"> Hide earned</label>
+  </div>
+  <div class="control-row">
+    <div class="kinds" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+  </div>
+  <div class="control-row">
+    <button id="export" type="button">Export progress (.json)</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset progress</button>
+    <span class="showing" id="showing"></span>
+  </div>
+</section>
+
+<main>
+  <div id="empty" class="empty" hidden></div>
+  <div id="list" class="list"></div>
+</main>
+
+<footer>
+  <h2>Sources &amp; honesty note</h2>
+  <p>Names, descriptions and grades are the official PlayStation 5 list as published (via Exophase and PSNProfiles, cross-checked by PlanetGTA6). Every guide on this page is written in our own words and names its sources beside it — a source is cited, never copied. Where no unlock method is confirmed yet (five trophies at launch), the guide says so instead of guessing, and will be updated when a source confirms the trigger.</p>
+  <ul id="sourceList"></ul>
+  <p class="disclaimer">Platinum Path is an unofficial fan guide. It is not affiliated with Rockstar Games, PlayStation, Exophase, PSNProfiles or PowerPyx, and it uses no Rockstar logo, artwork, box art or game screenshot. Trophy list checked 18–19 November 2026. Works fully offline: it fetches nothing at run time.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
